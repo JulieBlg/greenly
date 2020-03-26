@@ -85,8 +85,10 @@ export class Store {
     } else {
       if (expiresIn < 11 && discountInPercent < 49) {
         discountInPercent += 2;
-      }
-      if (expiresIn < 6 && discountInPercent < 50) {
+        if (expiresIn < 6 && discountInPercent < 50) {
+          discountInPercent += 1;
+        }
+      } else {
         discountInPercent += 1;
       }
     }
